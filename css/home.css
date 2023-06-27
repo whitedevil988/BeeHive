@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
 header{
     display: flex;
     flex-flow: row wrap;
@@ -6,6 +12,130 @@ header{
     padding: 10px;
     background-color: #000;
     position: relative;
+    z-index: 1;
+}
+
+header .logo{
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+}
+
+.features{
+  padding: 50px 12%;
+  font-size: 22px;
+}
+.row{
+  display: flex;
+  width: 100%;
+  align-items: left;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.text-col p{
+color: yellow;
+font-style: italic;
+font-size: 24px;
+align-items: center;
+}
+.text-col{
+  color: #fff;
+  margin-top: 100px;
+}
+.text-com{
+  color: #fff;
+  margin-top: 100px;
+}
+.img-col{
+margin-top: 100px;
+
+}
+.img-col img{
+width: 75%;
+margin-left: 75%;
+}
+.features h2{
+  font-size: 75px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.About{
+border-radius: 15px 50px 30px;
+background-color: #fff;
+padding: 20px;
+width: 200%;
+height: 200%;
+}
+.About h1{
+color: #000;
+background-color: #fff;
+}
+.About p{
+color: #000;
+background-color: #fff;
+}
+
+.ourvision .content p3{
+color: #fff;
+background-color: #303030;
+}
+
+.ourvision{
+padding: 10px 12%;
+text-align: center;
+font-size: 18px;
+color: #fff;
+}
+.ourvision h2{
+font-weight: 500;
+font-size: 40px;
+}
+.accordion{
+margin: 60px auto;
+width: 100%;
+max-width: 750px;
+}
+.accordion li{
+list-style: none;
+width: 100%;
+padding: 5px;
+}
+.accordion li label{
+display: flex;
+align-items: center;
+padding: 20px;
+font-size: 18px;
+font-weight: 500;
+background: #303030;
+margin-bottom: 2px;
+cursor: pointer;
+position: relative;
+}
+label::after{
+content: '+';
+font-size: 34px;
+position: absolute;
+right: 20px;
+transition: transform 0.5s;
+}
+input[type="radio"]{
+display: none;
+}
+.accordion .content{
+background: #303030;
+text-align: left;
+padding: 0 20px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s,padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+max-height: 600px;
+padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+transform: rotate(135deg);
 }
 
 nav ul {
